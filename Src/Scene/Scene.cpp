@@ -1,10 +1,8 @@
 #include "Scene.hpp"
 #include "../StateManager/StateManager.hpp"
 #include "../StateManager/Game/Game.hpp"
-#include "../ECS/Entity/Entity.hpp"
 
 #include <memory>
-#include <cassert>
 
 sf::RenderWindow Scene::window;
 sf::View Scene::camera;
@@ -20,7 +18,7 @@ void Scene::init()
 	camera.zoom(0.5);
 	window.setView(camera);
 
-	//StateManager::states.emplace(std::move(std::make_unique<StateManager>(Game()))); //something is wrong here constructor...
+	StateManager::states.emplace(std::make_unique<StateManager>(Game()));
 }
 
 const sf::Vector2u Scene::determineResolution()
