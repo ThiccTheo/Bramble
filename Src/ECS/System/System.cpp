@@ -1,5 +1,5 @@
 #include "System.hpp"
-#include "../../../Utility/ScopedTimer/ScopedTimer.hpp"
+#include "../../../Extensions/ScopedTimer/ScopedTimer.hpp"
 
 std::vector<size_t> System::queryEntities(const int argc, ...)
 {

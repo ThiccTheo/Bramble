@@ -3,22 +3,11 @@
 
 std::stack<std::unique_ptr<StateManager>> StateManager::states;
 
-StateManager::StateManager()
-{
-	checkState();
-}
+StateManager::StateManager() {}
 
-StateManager::~StateManager()
-{
-	checkState();
-}
+StateManager::~StateManager(){}
 
 void StateManager::run() {};
-
-void StateManager::checkState()
-{
-	states.top()->run();
-}
 
 const sf::Event StateManager::eventHandler()
 {

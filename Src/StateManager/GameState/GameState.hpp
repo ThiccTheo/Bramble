@@ -4,9 +4,11 @@
 
 #include <iostream>
 
-class Game : public StateManager
+class GameState : public StateManager
 {
 public:
+	GameState();
+	~GameState() override;
 	void run() override;
 };
 

@@ -146,7 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Src\StateManager\Game\Game.cpp" />
+    <ClCompile Include="Src\StateManager\GameState\GameState.cpp" />
     <ClCompile Include="Src\ResourceManager\ResourceManager.cpp" />
     <ClCompile Include="Src\Scene\Scene.cpp" />
     <ClCompile Include="Src\ECS\Component\Component.cpp" />
@@ -154,11 +154,11 @@
     <ClCompile Include="Src\Main.cpp" />
     <ClCompile Include="Src\ECS\System\System.cpp" />
     <ClCompile Include="Src\StateManager\StateManager.cpp" />
-    <ClCompile Include="Utility\PerlinNoise\PerlinNoise.cpp" />
-    <ClCompile Include="Utility\ScopedTimer\ScopedTimer.cpp" />
+    <ClCompile Include="Extensions\PerlinNoise\PerlinNoise.cpp" />
+    <ClCompile Include="Extensions\ScopedTimer\ScopedTimer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\StateManager\Game\Game.hpp" />
+    <ClInclude Include="Src\StateManager\GameState\GameState.hpp" />
     <ClInclude Include="Src\ResourceManager\ResourceManager.hpp" />
     <ClInclude Include="Src\Scene\Scene.hpp" />
     <ClInclude Include="Src\ECS\Component\Component.hpp" />
@@ -166,8 +166,8 @@
     <ClInclude Include="Include\CommonSFML.hpp" />
     <ClInclude Include="Src\ECS\System\System.hpp" />
     <ClInclude Include="Src\StateManager\StateManager.hpp" />
-    <ClInclude Include="Utility\PerlinNoise\PerlinNoise.hpp" />
-    <ClInclude Include="Utility\ScopedTimer\ScopedTimer.hpp" />
+    <ClInclude Include="Extensions\PerlinNoise\PerlinNoise.hpp" />
+    <ClInclude Include="Extensions\ScopedTimer\ScopedTimer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

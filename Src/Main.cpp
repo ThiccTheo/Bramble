@@ -1,16 +1,21 @@
 #include "Scene/Scene.hpp"
 #include "ResourceManager/ResourceManager.hpp"
+#include "StateManager/StateManager.hpp"
+#include "StateManager/GameState/GameState.hpp"
 
+#include <memory>
 #include <iostream>
 
 int main()
 {
-	switch (ResourceManager::load())
+	if (ResourceManager::load())
 	{
-		case true:
-			Scene::init();
-			return EXIT_SUCCESS;
-		case false:
-			return EXIT_FAILURE;
+		Scene::init();
+		StateManager::states.emplace(std::make_unique<GameState>());
+		return EXIT_SUCCESS;
+	}
+	else
+	{
+		return EXIT_FAILURE;
 	}
 }
