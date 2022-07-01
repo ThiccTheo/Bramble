@@ -36,7 +36,16 @@ std::vector<size_t> System::queryEntities(const int argc, ...)
 	return filteredIndices;
 }
 
-void System::draw()
+void System::removeEntities()
+{
+	Entity::entities.erase(std::remove_if(Entity::entities.begin(), Entity::entities.end(),
+		[](Entity& entity) -> bool
+		{
+			return true; //change
+		}), Entity::entities.end());
+}
+
+void System::drawEntities()
 {
 	//std::vector<size_t>filteredIndices {queryEntities(2, ComponentId::mesh, ComponentId::renderLayer)};
 
