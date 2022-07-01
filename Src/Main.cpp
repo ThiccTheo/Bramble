@@ -11,7 +11,8 @@ int main()
 	if (ResourceManager::load())
 	{
 		Scene::init();
-		StateManager::states.emplace(std::make_unique<GameState>());
+		StateManager::states.emplace(std::make_unique<GameState>()); //create game state
+		StateManager::checkState();
 		return EXIT_SUCCESS;
 	}
 	else

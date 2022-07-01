@@ -3,9 +3,13 @@
 
 std::stack<std::unique_ptr<StateManager>> StateManager::states;
 
-StateManager::StateManager() {}
-
-StateManager::~StateManager(){}
+void StateManager::checkState()
+{
+	if (!states.empty())
+	{
+		states.top()->run();
+	}
+}
 
 void StateManager::run() {};
 

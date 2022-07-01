@@ -1,5 +1,8 @@
 #include "System.hpp"
 #include "../../../Extensions/ScopedTimer/ScopedTimer.hpp"
+#include "../Component/Component.hpp"
+
+#include <algorithm>
 
 std::vector<size_t> System::queryEntities(const int argc, ...)
 {
@@ -14,10 +17,9 @@ std::vector<size_t> System::queryEntities(const int argc, ...)
 
 		for (int i{ 0 }; i < argc; i++)
 		{
-			if (Entity::entities[i].mask[static_cast<int>(va_arg(argv, ComponentId))] == 0) //if entity is missing one of the variadic args, don't add
+			if (Entity::entities[i].components[static_cast<int>(va_arg(argv, ComponentId))] == nullptr)
 			{
 				flag = false;
-				std::cout << "missing\n";
 				break;
 			}
 		}
@@ -30,5 +32,20 @@ std::vector<size_t> System::queryEntities(const int argc, ...)
 		va_end(argv);
 	}
 
+	std::cout << filteredIndices.size() << '\n';
 	return filteredIndices;
+}
+
+void System::draw()
+{
+	//std::vector<size_t>filteredIndices {queryEntities(2, ComponentId::mesh, ComponentId::renderLayer)};
+
+	////sort entities based on render layer level
+	//std::sort(filteredIndices.begin(), filteredIndices.end(),
+	//	[](const size_t& index1, const size_t& index2)
+	//	{
+	//		return
+	//			Entity::entities[index1].components[static_cast<int>(ComponentId::renderLayer)] <
+	//			Entity::entities[index2].components[static_cast<int>(ComponentId::renderLayer)]->layerLevel;
+	//	});
 }

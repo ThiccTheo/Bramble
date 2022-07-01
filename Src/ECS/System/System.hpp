@@ -8,5 +8,6 @@ class System
 {
 public:
 	static std::vector<size_t> queryEntities(const int argc, ...);
+	static void draw();
 };
 

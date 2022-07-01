@@ -4,44 +4,40 @@
 
 std::vector<Entity> Entity::entities;
 
-Entity::Entity() {}
+Entity::Entity()
+{
+	for (auto& component : components)
+	{
+		component = nullptr;
+	}
+}
 
-Entity::~Entity() {}
-
-//emplace component into entity if not present
 void Entity::addComponent(const Component& component)
 {
-	if (!mask[static_cast<int>(component.id)]) //check if component is not present
+	int index{ static_cast<int>(component.id) };
+
+	if (components[index] == nullptr)
 	{
-		components.emplace_back(std::make_unique<Component>(component));
-		mask[static_cast<int>(component.id)] = 1; //set the bit |
+		components[index] = std::make_unique<Component>(component);
 	}
 }
 
-//delete component from an entity if it is present
 void Entity::removeComponent(const ComponentId id) 
 {
-	if (mask[static_cast<int>(id)]) //check if component is present
+	int index{ static_cast<int>(id) };
+
+	if (components[index] != nullptr)
 	{
-		components.erase(std::remove_if(components.begin(), components.end(),
-			[id](std::unique_ptr<Component>& component)
-			{
-				return component->id == id;
-			}));
-		mask[static_cast<int>(id)] = 0; //clear the bit &
+		components[index] = nullptr;
 	}
 }
 
-//replaces existing component with new component
 void Entity::modifyComponent(const Component& component)
 {
-	if (mask[static_cast<int>(component.id)]) //check if component is present
+	int index{ static_cast<int>(component.id) };
+
+	if (components[index] != nullptr)
 	{
-		components.erase(std::remove_if(components.begin(), components.end(),
-			[&, component](std::unique_ptr<Component>& currentComponent)
-			{
-				return currentComponent->id == component.id;
-			}));
-		components.emplace_back(std::make_unique<Component>(component));
+		components[index] = std::make_unique<Component>(component);
 	}
 }

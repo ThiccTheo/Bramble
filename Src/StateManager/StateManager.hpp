@@ -10,8 +10,7 @@ class StateManager
 public:
 	static std::stack<std::unique_ptr<StateManager>> states;
 
-	StateManager();
-	virtual ~StateManager();
+	static void checkState();
 	virtual void run();
 	static const sf::Event eventHandler();
 private:

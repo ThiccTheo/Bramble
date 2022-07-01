@@ -2,17 +2,15 @@
 #include "../../../Include/CommonSFML.hpp"
 
 #include <iostream>
+#include <vector>
 #include <unordered_map>
 
-enum class ComponentId {active, renderLayer, count};
+enum class ComponentId {active, renderLayer, mesh, count};
 
 class Component
 {
 public:
 	ComponentId id;
-
-	Component();
-	~Component();
 };
 
 struct Active : public Component 
@@ -21,3 +19,18 @@ struct Active : public Component
 
 	Active(const bool isActive);
 };
+
+struct RenderLayer : public Component
+{
+	int layerLevel;
+
+	RenderLayer(const int layerLevel);
+};
+
+struct Mesh : public Component
+{
+	std::vector<sf::Vector2f> vertices;
+
+	Mesh(const std::vector<sf::Vector2f>& vertices);
+}; 
+

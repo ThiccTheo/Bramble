@@ -7,8 +7,6 @@
 class GameState : public StateManager
 {
 public:
-	GameState();
-	~GameState() override;
 	void run() override;
 };
 
