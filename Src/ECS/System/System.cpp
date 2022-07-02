@@ -41,7 +41,9 @@ void System::removeEntities()
 	Entity::entities.erase(std::remove_if(Entity::entities.begin(), Entity::entities.end(),
 		[](Entity& entity) -> bool
 		{
-			return true; //change
+			Active* active = dynamic_cast<Active*>(entity.components[static_cast<int>(ComponentId::active)].get());
+			return active && active->isActive == false;
+
 		}), Entity::entities.end());
 }
 

@@ -13,7 +13,7 @@ public:
 
 	Entity();
 	void addComponent(const Component& component);
-	void removeComponent(const ComponentId id);
 	void modifyComponent(const Component& component);
+	void removeComponent(const ComponentId id);
+private:
 };
-

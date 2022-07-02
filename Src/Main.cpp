@@ -10,6 +10,7 @@ int main()
 {
 	if (ResourceManager::load())
 	{
+		srand(static_cast<unsigned int>(time(NULL)));
 		Scene::init();
 		StateManager::states.emplace(std::make_unique<GameState>()); //create game state
 		StateManager::checkState();

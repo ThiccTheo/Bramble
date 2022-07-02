@@ -6,12 +6,5 @@ std::unordered_map<FontId, sf::Font> ResourceManager::fontMap;
 
 const bool ResourceManager::load()
 {
-	if (0 == 0)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return true;
 }

@@ -1,4 +1,5 @@
 #include "Entity.hpp"
+#include "../System/System.hpp"
 
 #include <algorithm>
 
@@ -18,7 +19,17 @@ void Entity::addComponent(const Component& component)
 
 	if (components[index] == nullptr)
 	{
-		components[index] = std::make_unique<Component>(component);
+		components[index] = component.clone();
+	}
+}
+
+void Entity::modifyComponent(const Component& component)
+{
+	int index{ static_cast<int>(component.id) };
+
+	if (components[index] != nullptr)
+	{
+		components[index] = component.clone();
 	}
 }
 
@@ -29,15 +40,5 @@ void Entity::removeComponent(const ComponentId id)
 	if (components[index] != nullptr)
 	{
 		components[index] = nullptr;
-	}
-}
-
-void Entity::modifyComponent(const Component& component)
-{
-	int index{ static_cast<int>(component.id) };
-
-	if (components[index] != nullptr)
-	{
-		components[index] = std::make_unique<Component>(component);
 	}
 }
