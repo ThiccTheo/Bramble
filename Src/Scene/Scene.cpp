@@ -11,8 +11,8 @@ void Scene::init()
 	window.setKeyRepeatEnabled(false); 
 	camera.setSize(sf::Vector2f(resolution));
 	camera.setCenter(sf::Vector2f(window.getPosition().x + window.getSize().x / 2.f, window.getPosition().y + window.getSize().y / 2.f));
-	camera.zoom(0.5);
-	window.setView(camera);
+	//camera.zoom(0.5);
+	//window.setView(camera);
 }
 
 const sf::Vector2u Scene::determineResolution()

@@ -4,7 +4,8 @@
 #include <iostream>
 #include <memory>
 
-enum class ComponentId {active, renderLayer, mesh, count};
+enum class OriginSpot { topLeft, topCenter, topRight, middleLeft, middleCenter, middleRight, bottomLeft, bottomCenter, bottomRight };
+enum class ComponentId {active, renderLayer, mesh, body, count};
 
 class Component
 {
@@ -35,10 +36,19 @@ struct RenderLayer : public Component
 
 struct Mesh : public Component
 {
-	std::vector<sf::Vector2f> vertices;
+	sf::Vector2f vertices[4];
 
-	Mesh(const std::vector<sf::Vector2f>& vertices);
+	Mesh();
 	~Mesh() override;
 	std::unique_ptr<Component> clone() const override;
 }; 
+
+struct Body : public Component
+{
+	sf::RectangleShape shape;
+
+	Body(const sf::Vector2i& indices, const sf::Vector2f& shapeSize, const OriginSpot originSpot);
+	~Body() override;
+	std::unique_ptr<Component> clone() const override;
+};
 

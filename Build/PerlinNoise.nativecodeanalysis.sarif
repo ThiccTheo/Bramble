@@ -1,0 +1,241 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 13,
+                  "endLine": 49,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 12,
+                  "endLine": 50,
+                  "endColumn": 16
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 13,
+                  "endLine": 52,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 284,
+                  "endLine": 55,
+                  "endColumn": 289
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 250,
+                  "endLine": 55,
+                  "endColumn": 255
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 207,
+                  "endLine": 55,
+                  "endColumn": 212
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 177,
+                  "endLine": 55,
+                  "endColumn": 182
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PerlinNoise::noise",
+                  "decoratedName": "?noise@PerlinNoise@@QEAANNNN@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.32.31332.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/new/OneDrive/Desktop/Bramble/Extensions/PerlinNoise/PerlinNoise.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "30e8124efede31017b6068b8391a779f7885be729804e1335d8e8fe7ee590a7a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/new/onedrive/desktop/bramble/extensions/perlinnoise/perlinnoise.hpp"
+          },
+          "hashes": {
+            "sha-256": "5b60f3d5eb3a61fa83e9530804af90a09b07cb353259c3cf2621f8024ed3708b"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\new\OneDrive\Desktop\Bramble\Src\ECS\Component\</FILEPATH>
+      <FILENAME>Component.hpp</FILENAME>
+      <LINE>17</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Component::id' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Component::{ctor}</FUNCTION>
+    <DECORATED>??0Component@@QEAA@XZ</DECORATED>
+    <FUNCLINE>17</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Component::id</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
